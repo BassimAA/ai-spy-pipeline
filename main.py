@@ -26,3 +26,5 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: python main.py
+
+Verbeterde main.py: met foto's, links, KPI's & Telegram fix
