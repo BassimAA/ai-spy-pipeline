@@ -1,4 +1,4 @@
-name: AI‑Spy Weekly
+name: ai-spy-pipeline
 
 on:
   schedule:
