@@ -1,3 +1,7 @@
+print("GOOGLE_CREDS exists:", bool(os.environ.get("GOOGLE_CREDS")))
+print("TELEGRAM_TOKEN exists:", bool(os.environ.get("TELEGRAM_TOKEN")))
+print("CHAT_ID exists:", bool(os.environ.get("CHAT_ID")))
+
 name: AI‑Spy Weekly
 
 on:
