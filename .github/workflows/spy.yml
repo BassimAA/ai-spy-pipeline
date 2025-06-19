@@ -1,17 +1,14 @@
-print("GOOGLE_CREDS exists:", bool(os.environ.get("GOOGLE_CREDS")))
-print("TELEGRAM_TOKEN exists:", bool(os.environ.get("TELEGRAM_TOKEN")))
-print("CHAT_ID exists:", bool(os.environ.get("CHAT_ID")))
-
-name: AI‑Spy Weekly
+name: AI‑Spy Weekly
 
 on:
   schedule:
-    - cron: '0 7 * * 1'    # ma 07:00 UTC = 09:00 NL
-  workflow_dispatch:       # handmatig starten
+    - cron: '0 7 * * 1'   # Maandag 07:00 UTC = 09:00 NL
+  workflow_dispatch:
 
 jobs:
   run:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,10 +18,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install deps
+      - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run AI‑spy
+      - name: Run AI‑Spy
         env:
           GOOGLE_CREDS: ${{ secrets.GOOGLE_CREDS }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
