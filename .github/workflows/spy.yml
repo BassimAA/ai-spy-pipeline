@@ -1,14 +1,13 @@
--  name: Run AI-Spy
+name: AI-Spy Weekly
 
 on:
   schedule:
-    - cron: '0 7 * * 1'   # Maandag 07:00 UTC = 09:00 NL
-  workflow_dispatch:
+    - cron: '0 7 * * 1'  # Maandag 09:00 NL-tijd (07:00 UTC)
+  workflow_dispatch:      # Handmatig starten via GitHub
 
 jobs:
   run:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run AI‑Spy
+      - name: Run AI-Spy
         env:
           GOOGLE_CREDS: ${{ secrets.GOOGLE_CREDS }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
