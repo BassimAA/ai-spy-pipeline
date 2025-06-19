@@ -1,4 +1,4 @@
-name: AI‑Spy Weekly
+-  name: Run AI-Spy
 
 on:
   schedule:
