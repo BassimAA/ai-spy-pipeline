@@ -1,5 +1,4 @@
 gspread
 oauth2client
-requests
-pandas
 beautifulsoup4
+requests
